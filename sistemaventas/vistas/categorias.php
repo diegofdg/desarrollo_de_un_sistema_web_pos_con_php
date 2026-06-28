@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 
@@ -24,6 +25,12 @@ if($_SESSION['almacen'] == 1){
 <html lang="en">
 
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<?php require_once "header.php" ?>
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
 
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -132,12 +139,22 @@ if($_SESSION['almacen'] == 1){
                 </div><!-- /.row -->
             </section><!-- /.content -->
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
         </div>
 
 
         <?php
         
+<<<<<<< HEAD
       //  require_once "footer.php";
+=======
+        require_once "footer.php";
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
         
         ?>
 
@@ -145,6 +162,10 @@ if($_SESSION['almacen'] == 1){
     </div>
 
 
+<<<<<<< HEAD
+=======
+    <script type="text/javascript" src="../vistas/codigosjs/categoria.js"></script>
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
 
 
 
@@ -153,6 +174,7 @@ if($_SESSION['almacen'] == 1){
 
 </body>
 
+<<<<<<< HEAD
 </html>
 
 <?php
@@ -171,3 +193,6 @@ if($_SESSION['almacen'] == 1){
 ob_end_flush();
 
 ?>
+=======
+</html>
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265

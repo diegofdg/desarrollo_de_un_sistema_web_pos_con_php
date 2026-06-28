@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 
@@ -6,6 +7,8 @@ session_start();
 ?>
 
 
+=======
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

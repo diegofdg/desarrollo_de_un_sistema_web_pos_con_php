@@ -29,8 +29,11 @@ if (!function_exists('ejecutarConsulta'))
 		return $row;
 	}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f95f5e5127285fa7e046b8d815ca47401d752265
 	function ejecutarConsulta_retornarID($sql)
 	{
 		global $conexion;
