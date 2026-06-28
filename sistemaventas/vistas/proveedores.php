@@ -1,29 +1,7 @@
-<?php 
-
-
-ob_start();
-session_start();
-
-if(!isset($_SESSION['nombre'])){
-
-    header("Location: login.php");
-
-}else{
-
-require 'header.php';
-
-
-if($_SESSION['almacen'] == 1){
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
-
+<?php require_once "header.php" ?>
 
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -53,7 +31,7 @@ if($_SESSION['almacen'] == 1){
                     <div class="col-md-12">
                         <div class="box">
                             <div class="box-header with-border">
-                                <h1 class="box-title">Categoría <button class="btn btn-success" id="btnagregar"
+                                <h1 class="box-title">proveedor <button class="btn btn-success" id="btnagregar"
                                         onclick="mostrarelformulario(true)"><i class="fa fa-plus-circle"></i>
                                         Agregar</button>
                                 </h1>
@@ -68,16 +46,20 @@ if($_SESSION['almacen'] == 1){
                                     <thead>
                                         <th>Opciones</th>
                                         <th>Nombre</th>
-                                        <th>Descripción</th>
-                                        <th>Estado</th>
+                                        <th>Documento</th>
+                                        <th>Número</th>
+                                        <th>Teléfono</th>
+                                        <th>Email</th>
                                     </thead>
                                     <tbody>
                                     </tbody>
                                     <tfoot>
                                         <th>Opciones</th>
                                         <th>Nombre</th>
-                                        <th>Descripción</th>
-                                        <th>Estado</th>
+                                        <th>Documento</th>
+                                        <th>Número</th>
+                                        <th>Teléfono</th>
+                                        <th>Email</th>
                                     </tfoot>
                                 </table>
                             </div>
@@ -88,19 +70,61 @@ if($_SESSION['almacen'] == 1){
                                 <form name="formulario" id="formulario" method="POST">
                                     <div class="row">
                                         <div class="col-sm-6">
-
                                             <div class="form-group">
                                                 <label>nombre</label>
-                                                <input type="hidden" name="idcategoria" id="idcategoria">
+                                                <input type="hidden" name="idpersona" id="idpersona">
+                                                <input type="hidden" name="tipo_persona" id="tipo_persona"
+                                                    value="Proveedor">
                                                 <input type="text" class="form-control" name="nombre" id="nombre"
                                                     placeholder="escribir nombre" required>
                                             </div>
                                         </div>
+
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>descripcion</label>
-                                                <input type="text" class="form-control" name="descripcion"
-                                                    id="descripcion" placeholder="escribir descripcion" required>
+                                                <label>tipo documento</label>
+                                                <select name="tipo_documento" class="form-control" id="tipo_documento">
+
+                                                    <option value="RUC">ruc</option>
+                                                    <option value="pasaportew">pasaporte</option>
+                                                    <option value="dni">dni</option>
+
+
+
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>numero documento</label>
+                                                <input type="text" class="form-control" name="num_documento"
+                                                    id="num_documento" placeholder="escribir nombre" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>direccion</label>
+                                                <input type="text" class="form-control" name="direccion" id="direccion"
+                                                    placeholder="escribir descripcion" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>telefono</label>
+                                                <input type="text" class="form-control" name="telefono" id="telefono"
+                                                    placeholder="escribir descripcion" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>email</label>
+                                                <input type="text" class="form-control" name="email" id="email"
+                                                    placeholder="escribir descripcion" required>
                                             </div>
                                         </div>
 
@@ -132,12 +156,15 @@ if($_SESSION['almacen'] == 1){
                 </div><!-- /.row -->
             </section><!-- /.content -->
 
+
+
+
         </div>
 
 
         <?php
         
-      //  require_once "footer.php";
+        require_once "footer.php";
         
         ?>
 
@@ -145,6 +172,7 @@ if($_SESSION['almacen'] == 1){
     </div>
 
 
+    <script type="text/javascript" src="../vistas/codigosjs/proveedor.js"></script>
 
 
 
@@ -154,20 +182,3 @@ if($_SESSION['almacen'] == 1){
 </body>
 
 </html>
-
-<?php
-
-}else{
-
-    require 'noaccesso.php';
-
-}
-
- require_once "footer.php";
-
- echo '<script type="text/javascript" src="../vistas/codigosjs/categoria.js"></script>';
-
-}
-ob_end_flush();
-
-?>

@@ -29,6 +29,8 @@ if (!function_exists('ejecutarConsulta'))
 		return $row;
 	}
 
+
+
 	function ejecutarConsulta_retornarID($sql)
 	{
 		global $conexion;
